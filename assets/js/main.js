@@ -1,7 +1,7 @@
 // Palindroma
 
 // Chiedere all’utente di inserire una parola 
-const userInput = prompt('Inserisci una parola');
+
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // checkPali(userInput); //do in pasto userInput alla funzione checkPali
@@ -25,11 +25,12 @@ const userInput = prompt('Inserisci una parola');
 //     }
 // }
 
-
+document.querySelector('button').addEventListener('click', checkPali)
 // creo un array all'interno della funzione utilizzando Array.from
-checkPali(userInput)
-function checkPali(toCheck) {
-    const arrayLettere = Array.from(toCheck)
+
+function checkPali() {
+    const userInput = prompt('Inserisci una parola');
+    const arrayLettere = Array.from(userInput)
     // console.log(arrayLettere);   
     let word;
     for (let i = 0; i < arrayLettere.length; i++) {
