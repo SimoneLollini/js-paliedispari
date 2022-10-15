@@ -27,25 +27,28 @@ const userInput = prompt('Inserisci una parola');
 
 
 // creo un array all'interno della funzione utilizzando Array.from
+checkPali(userInput)
+function checkPali(toCheck) {
+    const arrayLettere = Array.from(toCheck)
+    // console.log(arrayLettere);   
+    let word;
+    for (let i = 0; i < arrayLettere.length; i++) {
+        word = arrayLettere[i];
+        // console.log(word);
+    }
+    let wordReverse;
+    for (let i = arrayLettere.length - 1; i > -1; i--) {
+        wordReverse = arrayLettere[i];
+        // console.log(wordReverse);
+    }
 
-const arrayLettere = Array.from(userInput)
-// console.log(arrayLettere);   
-let word;
-for (let i = 0; i < arrayLettere.length; i++) {
-    word = arrayLettere[i];
-    // console.log(word);
-}
-let wordReverse;
-for (let i = arrayLettere.length - 1; i > -1; i--) {
-    wordReverse = arrayLettere[i];
-    // console.log(wordReverse);
+    if (word === wordReverse) {
+        console.log("La parola inserita è palindroma");
+    } else {
+        console.log("La parola inserita non è palindroma");
+    }
 }
 
-if (word === wordReverse) {
-    console.log("La parola inserita è palindroma");
-} else {
-    console.log("La parola inserita non è palindroma");
-}
 
 
 //Pari e dispari
