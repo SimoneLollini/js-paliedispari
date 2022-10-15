@@ -1,9 +1,8 @@
 // Chiedere all’utente di inserire una parola 
-const string = prompt('Enter a string: ');
+const userInput = prompt('Inserisci una parola');
 // Creare una funzione per capire se la parola inserita è palindroma
-// program to check if the string is palindrome or not
 
-
+checkPali(userInput); //do in pasto userInput alla funzione checkPali
 function checkPali(toCheck) {
     //creo un array che divida le lettere separatamente usando .split
     const arrayLettere = toCheck.split('');
@@ -16,14 +15,16 @@ function checkPali(toCheck) {
     const reverseToCheck = reverseArray.join('');
     // se la parola inserita è uguale alla stringa ottenuta invertendo la parola inserita stampo è palindoma 
     if (toCheck === reverseToCheck) {
-        console.log('It is a palindrome');
+        console.log('La parola inserita è palindroma');
     }
     else {
         // altrimenti stampo non è palindroma
-        console.log('It is not a palindrome');
+        console.log('La parola inserita non è palindroma');
     }
 }
 
-checkPali(string);
+
+
+
 
 
