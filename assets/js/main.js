@@ -74,8 +74,8 @@ function computerNumber() {
 //console.log(computerNumber());
 
 
-function sum(userNumber, computerNumber) {
-    if ((userNumber + computerNumber) % 2 === 0) {
+function sum(n1, n2) {
+    if ((n1 + n2) % 2 === 0) {
         console.log("Vince pari");
     } else {
         console.log("Vince dispari");
