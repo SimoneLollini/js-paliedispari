@@ -25,9 +25,10 @@
 // //     }
 // // }
 
-// document.querySelector('.check_pali > button').addEventListener('click', checkPali)
 // // creo un array all'interno della funzione utilizzando Array.from
 
+
+// non funziona corretamente infatti se la parola inserita termina con la stessa lettera con cui comincia anche se non palindroma da output "palindromo"
 // function checkPali() {
 //     const userInput = prompt('Inserisci una parola');
 //     const arrayLettere = Array.from(userInput)
@@ -52,7 +53,29 @@
 
 
 
+document.querySelector('.check_pali > button').addEventListener('click', checkPali)
+let reversedWord = "";
 
+function checkPali() {
+    const userInput = prompt("Inserisci una parola")
+    console.log(userInput);
+    let i = userInput.length;
+    while (i > 0) {
+        // uso i-1 perché i parte a contare da 0, length invece parte da 1 !
+        let selezioneLettere = userInput.charAt(i - 1);
+        // console.log(char);
+        //rimonto la parola al contrario sommando le lettere del testo
+        reversedWord += selezioneLettere
+        i--
+    }
+    console.log(reversedWord);
+
+    if (reversedWord === userInput) {
+        console.log("La parola inserita è palindroma");
+    } else {
+        console.log("La parola inserita non è palindroma");
+    }
+}
 
 
 //Pari e dispari
